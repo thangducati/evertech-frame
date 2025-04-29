@@ -7,11 +7,10 @@ upload.addEventListener('change', (e) => {
         alert("Khung chưa sẵn sàng!");
         return;
       }
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Vị trí và kích thước khung avatar
-      const x = 250;
+      const x = 250; // Có thể loại bỏ nếu không cần
       const y = 30;
       const w = 430;
       const h = 530;
@@ -22,7 +21,7 @@ upload.addEventListener('change', (e) => {
       const drawHeight = avatar.height * scale;
 
       // Căn giữa hình ảnh trong khung
-      const offsetX = (canvas.width - drawWidth) / 2; // Căn giữa theo chiều ngang toàn bộ canvas
+      const offsetX = (canvas.width - drawWidth) / 2; // Điều chỉnh căn giữa
       const offsetY = y + (h - drawHeight) / 2;
 
       // Vẽ ảnh avatar (giữ tỷ lệ gốc)
